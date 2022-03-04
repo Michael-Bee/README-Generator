@@ -12,6 +12,21 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Who made this project?',
+        name: 'authors',
+    },
+    {
+        type: 'input',
+        message: 'What is your contact email?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What GitHub profiles are connected to this project?',
+        name: 'github',
+    },
+    {
+        type: 'input',
         message: 'How would you describe the purpose and features of this project?',
         name: 'description',
     },
@@ -27,50 +42,41 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Who contributed to this project?',
-        name: 'contributors',
+        message: 'How can someone contribute to this project?',
+        name: 'contribute',
     },
     {
         type: 'input',
-        message: 'What is your contact email?',
-        name: 'email',
-    },
-    {
-        type: 'input',
-        message: 'What GitHub profiles are connected to this project?',
-        name: 'github',
+        message: 'What testing has been done on this project?',
+        name: 'testing',
     },
     {
         type: 'list',
         message: 'How would you like to license this project?',
         choices: [ 
-            'GNU AGPLv3', 
-            'GNU GPLv3', 
-            'GNU LGPLv3', 
-            'Mozilla Public License 2.0', 
-            'Apache License 2.0', 
-            'MIT License', 
-            'Boost Software License', 
-            'The Unlicense',
+            'Apache2.0',
+            'BSD-3-Clause',
+            'BSD-2-Clause',
+            'GPL-3.0', 
+            'LGPL-3.0', 
+            'MIT', 
+            'MPL-2.0',  
+            'CDDL-1.0', 
+            'EPL-2.0',
         ],
         name: 'license',
-    },
-    {
-        type: 'input',
-        message: 'What instructions are there for testing this project?',
-        name: 'testing',
     },
 ];
 
     inquirer.prompt(questions)
     .then((answers) => {
         console.log(answers);
-        writeToFile(answers);
+        writeReadme(answers);
     });
 
 // TODO: Create a function to write README file
-function writeToFile(answers) {
-    fs.writeFile(`ReadMe.md`, answers, (err) => {
+function writeReadme(answers) {
+    fs.writeFile(`ReadMe.md`, generateMarkdown, (err) => {
         err ? console.error(err) : console.log("ReadMe created!");
     });
 };
