@@ -20,6 +20,8 @@ function generateMarkdown(answers) {
 
 //put renderLicenseBadge here
 
+![ReadMe Generator Demo](demo/ReadMe_Generator_Demo.gif)
+
 ---
 
 ## Table of Contents:

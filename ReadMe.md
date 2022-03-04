@@ -1,5 +1,9 @@
 
-# ReadReadMe Generator //put renderLicenseBadge here
+# ReadMe Generator 
+
+//put renderLicenseBadge here
+
+![ReadMe Generator Demo](./demo/ReadMe_Generator_Demo.gif)
 
 ---
 
@@ -20,7 +24,7 @@
 ### Michael Bee
 
 
-## <span id="contact">Contact:</span>
+## <span id="contact">Contact/Questions:</span>
 
 Email: bee.michael.02@gmail.com
 
@@ -31,27 +35,27 @@ Please contact with any questions.
 
 ## <span id="description">Description:</span>
 
-A simple ReadMe generator that takes user input by prompting questions, then places the responses in a template to generate the ReadMe file.
+A simple ReadMe generator that prompts the user with questions, then puts the responses into a template and writes the ReadMe file.
 
 
 ## <span id="installation">Installation:</span>
 
-md git clone to your local repository from the GitHub repository.
+md git clone to local repository from GitHub repository.
 
 
 ## <span id="usage">Usage:</span>
 
-This can be used to create ReadMe files for various projects.
+Can be used to generate ReadMe files for any projects.
 
 
 ## <span id="contribution">Contribution:</span>
 
-Please contribute to fork on GitHub.
+Please contribute in the GitHub fork.
 
 
 ## <span id="testing">Testing:</span>
 
-No testing has yet been completed.
+No testing has been completed.
 
 
 ## <span id="license">License:</span>
