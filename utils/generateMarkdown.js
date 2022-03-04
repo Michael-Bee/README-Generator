@@ -1,23 +1,24 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  (https://img.shields.io/badge/license-${answers.license}-red)
-}
+// // TODO: Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
+// function renderLicenseBadge(license) {
+//   (https://img.shields.io/badge/license-${answers.license}-red)
+// }
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//   (https://opensource.org/licenses/${answers.license})
+// }
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  (https://opensource.org/licenses/${answers.license})
-}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+//Generates markdown for README
 function generateMarkdown(answers) {
   return `
-# ${answers.title} //put renderLicenseBadge here
+# ${answers.title} 
+
+//put renderLicenseBadge here
 
 ---
 
@@ -37,11 +38,14 @@ function generateMarkdown(answers) {
 
 ### ${answers.authors}
 
-## <span id="contact">Contact:</span>
+
+## <span id="contact">Contact/Questions:</span>
 
 Email: ${answers.email}
 
 GitHub: https://github.com/${answers.github}
+
+Please contact with any questions.
 
 
 ## <span id="description">Description:</span>
@@ -68,10 +72,14 @@ ${answers.contribute}
 
 ${answers.testing}
 
+
 ## <span id="license">License:</span>
 
+
 ${answers.license}
+
 // put renderLicenseSection here
+
 // put renderLicenseLink here
 
 ---
@@ -80,4 +88,5 @@ ${answers.license}
 `;
 }
 
+//Exports markdown to index.js
 module.exports = generateMarkdown;
