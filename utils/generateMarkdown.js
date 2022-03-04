@@ -22,7 +22,7 @@ function generateMarkdown(answers) {
 ---
 
 ## Table of Contents:
-1. [Contributors](#contributors)
+1. [Authors](#authors)
 2. [Contact](#contact)
 3. [Description](#description)
 4. [Installation](#installation)
@@ -33,42 +33,42 @@ function generateMarkdown(answers) {
 
 ---
 
-## <a name="contributors">Contributors:</a>
+## <span id="authors">Authors:</span>
 
 ### ${answers.authors}
 
-## <a name="contact">Contact:</a>
+## <span id="contact">Contact:</span>
 
 Email: ${answers.email}
 
 GitHub: https://github.com/${answers.github}
 
 
-## <a name="description">Description:</a>
+## <span id="description">Description:</span>
 
 ${answers.description}
 
 
-## <a name="installation">Installation:</a>
+## <span id="installation">Installation:</span>
 
 ${answers.install}
 
 
-## <a name="usage">Usage:</a>
+## <span id="usage">Usage:</span>
 
 ${answers.usage}
 
 
-## <a name="contribution">Contribution:</a>
+## <span id="contribution">Contribution:</span>
 
 ${answers.contribute}
 
 
-## <a name="testing">Testing:</a>
+## <span id="testing">Testing:</span>
 
 ${answers.testing}
 
-## <a name="license">License:</a>
+## <span id="license">License:</span>
 
 ${answers.license}
 // put renderLicenseSection here
