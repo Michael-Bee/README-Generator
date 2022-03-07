@@ -7,62 +7,68 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        message: 'What is the title of this project?',
+        message: 'Project Title:',
         name: 'title',
     },
     {
         type: 'input',
-        message: 'Who made this project?',
+        message: 'Author(s):',
         name: 'authors',
     },
     {
         type: 'input',
-        message: 'What is your contact email?',
-        name: 'email',
+        message: 'Link(s) to deployed project:',
+        name: 'links',
     },
     {
         type: 'input',
-        message: 'What GitHub profiles are connected to this project?',
-        name: 'github',
-    },
-    {
-        type: 'input',
-        message: 'How would you describe the purpose and features of this project?',
+        message: 'Description of purpose and features:',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'What are the steps required to install this project?',
+        message: 'Technologies used:',
+        name: 'technologies',
+    },
+    {
+        type: 'input',
+        message: 'Installation:',
         name: 'install',
     },
     {
         type: 'input',
-        message: 'What instructions are there for use of this project?',
+        message: 'Usage instructions:',
         name: 'usage',
     },
     {
         type: 'input',
-        message: 'How can someone contribute to this project?',
+        message: 'Contribution instructions:',
         name: 'contribute',
     },
     {
         type: 'input',
-        message: 'What testing has been done on this project?',
+        message: 'Testing:',
         name: 'testing',
     },
     {
+        type: 'input',
+        message: 'Contact email:',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'GitHub repository:',
+        name: 'github',
+    },
+    {
         type: 'list',
-        message: 'How would you like to license this project?',
+        message: 'License:',
         choices: [ 
             'Apache2.0',
             'BSD-3-Clause',
-            'BSD-2-Clause',
             'GPL-3.0', 
             'LGPL-3.0', 
             'MIT', 
-            'MPL-2.0',  
-            'CDDL-1.0', 
-            'EPL-2.0',
         ],
         name: 'license',
     },
@@ -78,7 +84,7 @@ inquirer.prompt(questions)
 
 //Writes the README file
 function writeReadme(answers) {
-    fs.writeFile(`ReadMe.md`, generateMarkdown(answers), (err) => {
+    fs.writeFile(`NewReadMe.md`, generateMarkdown(answers), (err) => {
         err ? console.error(err) : console.log("ReadMe created!");
     });
 };
